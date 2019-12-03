@@ -6,6 +6,7 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --out-dir public",
+    "serve": "serve public",
     "deploy": "now",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +22,12 @@
   "homepage": "https://github.com/albertmolodec/vanilla-auth-form#readme",
   "devDependencies": {
     "now": "^16.6.0",
-    "parcel-bundler": "^1.12.4"
+    "parcel-bundler": "^1.12.4",
+    "serve": "^11.2.0"
+  },
+  "dependencies": {
+    "autoprefixer": "^9.7.3",
+    "postcss-modules": "^1.4.1",
+    "postcss-nested": "^4.2.1"
   }
 }

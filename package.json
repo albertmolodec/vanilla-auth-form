@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "parcel src/index.njk --out-dir public",
-    "build": "parcel build src/index.njk --out-dir public",
+    "start": "parcel src/pages/index.njk",
+    "build": "parcel build src/pages/*.njk --out-dir public",
     "serve": "serve public",
     "deploy": "now",
     "clean": "rimraf dist .cache public",

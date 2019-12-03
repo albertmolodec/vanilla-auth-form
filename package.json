@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html",
+    "build": "parcel build index.html --out-dir public",
+    "deploy": "now",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +20,7 @@
   },
   "homepage": "https://github.com/albertmolodec/vanilla-auth-form#readme",
   "devDependencies": {
+    "now": "^16.6.0",
     "parcel-bundler": "^1.12.4"
   }
 }

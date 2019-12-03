@@ -1,0 +1,24 @@
+{
+  "name": "vanilla-auth-form",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/albertmolodec/vanilla-auth-form.git"
+  },
+  "author": "Albert Abdulmanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/albertmolodec/vanilla-auth-form/issues"
+  },
+  "homepage": "https://github.com/albertmolodec/vanilla-auth-form#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

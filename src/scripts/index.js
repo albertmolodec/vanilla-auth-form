@@ -1,1 +1,5 @@
-console.log('javascript is working')
+import App from "./App";
+import Modal from "./Modal";
+
+const app = new App();
+console.log(app.state);

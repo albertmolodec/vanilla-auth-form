@@ -1,0 +1,21 @@
+:root {
+  --color-grey-700: #222;
+  --color-grey-400: #666;
+  --color-grey-300: #777;
+  --color-grey-200: #999;
+  --color-grey-100: #f9fafc;
+  --color-blue-900: #001ffe;
+  --color-blue-700: #1f3aff;
+  --color-blue-500: #344dff;
+  --color-blue-300: #5469ff;
+  --color-blue-100: #b6bfff;
+  --color-red-500: #f1473d;
+  --color-red-400: #fc5449;
+  --color-green-500: #00ad1c;
+
+  --color-blue-pink-gradient: linear-gradient(
+    44.21deg,
+    #6a82fb 0%,
+    #fc5c7d 100%
+  );
+}

@@ -1,9 +1,11 @@
 :root {
+  --color-black: #000;
   --color-grey-700: #222;
   --color-grey-400: #666;
   --color-grey-300: #777;
   --color-grey-200: #999;
   --color-grey-100: #f9fafc;
+  --color-white: #fff;
   --color-blue-900: #001ffe;
   --color-blue-700: #1f3aff;
   --color-blue-500: #344dff;

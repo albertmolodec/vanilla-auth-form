@@ -1,26 +1,24 @@
+/* Reset */
+
+@import "./reset.css";
+
 /* Fonts */
 
 @import "./fonts.css";
 
 /* Variables */
 
-@import "./border-radius.css";
-@import "./colors.css";
-@import "./effects.css";
-@import "./grids.css";
-@import "./spacers.css";
-@import "./typography.css";
-
-body {
-  font-family: var(--font-family-text);
-}
+@import "./variables/border-radius.css";
+@import "./variables/colors.css";
+@import "./variables/effects.css";
+@import "./variables/grids.css";
+@import "./variables/spacers.css";
+@import "./variables/typography.css";
 
 /* Blocks */
+@import "./blocks/logo.css";
 
-/*
-@import 'blocks/visually-hidden.css';
-@import 'blocks/page.css';
-@import 'blocks/header.css';
-@import 'blocks/logo.css';
-@import 'blocks/navigation.css';
-*/
+/* Misc */
+
+@import './layout.css';
+@import './helpers.css';

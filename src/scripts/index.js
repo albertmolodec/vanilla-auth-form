@@ -1,4 +1,6 @@
 import App from "./App";
+import initModal from './modal'
 
 const app = new App();
-console.log(app.state);
+initModal();
+console.log(app.state, initModal);

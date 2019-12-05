@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="/images/favicon.png"
-    />
-    <link rel="stylesheet" href="/styles/styles.css" />
+/>
+    <link rel="stylesheet" href="/styles/styles.css"/>
     <title>Registration form</title>
   </head>
   <body>
@@ -18,11 +18,28 @@
       <div class="layout-container contact">
         <div class="contact__container">
           <img class="logo" src="/images/chewing-gum-logo.svg" width="150" height="28" alt="Chewing Gum logo">
+          <button id="myBtn" width="200" height="40">Toggle modal</button>
         </div>
       </div>
       <div class="layout-container creation">
         <div class="creation__container">
             Create account
+        </div>
+      </div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
+        <div class="modal-footer">
+          <h3>Modal Footer</h3>
         </div>
       </div>
     </div>

@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="/images/favicon.png"
-/>
-    <link rel="stylesheet" href="/styles/styles.css"/>
+    />
+    <link rel="stylesheet" href="/styles/styles.css" />
     <title>Registration form</title>
   </head>
   <body>
     <div class="layout">
       <div class="layout-container contact">
         <div class="contact__container">
-          <img class="logo" src="/images/chewing-gum-logo.svg" width="150" height="28" alt="Chewing Gum logo">
-          <button id="myBtn" width="200" height="40">Toggle modal</button>
+          <img
+            class="logo"
+            src="/images/chewing-gum-logo.svg"
+            width="150"
+            height="28"
+            alt="Chewing Gum logo"
+          />
+          <h2 class="title">Contact us</h2>
+          <p class="text-block">
+            contacts@chewinggum.com 37 Greenpoint Avenue Ste. 219 +1 999 99 99 9
+          </p>
+          <button id="myBtn" class="button" width="200" height="40">Send feedback</button>
         </div>
       </div>
       <div class="layout-container creation">
         <div class="creation__container">
-            Create account
+          <h1 class="title">Create account</h1>
+          <form action="javascript:void(0);">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <div>
+                <input type="radio" id="contactChoice1"
+                 name="contact" value="email" checked>
+                <label for="contactChoice1">Email</label>
+
+                <input type="radio" id="contactChoice2"
+                 name="contact" value="phone">
+                <label for="contactChoice2">Phone</label>
+
+                <input type="radio" id="contactChoice3"
+                 name="contact" value="mail">
+                <label for="contactChoice3">Mail</label>
+              </div>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+              <button type="submit">Submit</button>
+          </form>
         </div>
       </div>
     </div>
 
     <div id="myModal" class="modal">
       <div class="modal-content">
-        <div class="modal-header">
-          <span class="close">&times;</span>
-          <h2>Modal Header</h2>
-        </div>
         <div class="modal-body">
-          <p>Some text in the Modal Body</p>
-          <p>Some other text...</p>
-        </div>
-        <div class="modal-footer">
-          <h3>Modal Footer</h3>
+          <button id="closeBtn">x</button>
+          <h2 class="title">Feedback form</h2>
+          <form action="javascript:void(0);">
+            <input type="text">
+            <input type="text">
+            <input type="text">
+            <textarea type="text">
+            <button type="submit">Submit</button>
+          </form>
         </div>
       </div>
     </div>

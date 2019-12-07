@@ -10,3 +10,11 @@
   border: 0;
   white-space: nowrap;
 }
+
+.noscroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}

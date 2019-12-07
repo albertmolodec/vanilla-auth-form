@@ -1,2 +1,1 @@
-# vanilla-auth-form
-
+# Registration form

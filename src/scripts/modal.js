@@ -6,12 +6,14 @@ function initModal(emitter) {
   const closeButton = document.getElementById("close-modal-button");
 
   emitter.on(EVENT_TYPES.OPEN_MODAL, () => {
-    modal.style.display = "flex";
+    modal.classList.remove("hidden");
+    document.body.classList.add("noscroll");
   });
 
   emitter.on(EVENT_TYPES.CLOSE_MODAL, () => {
-    modal.style.display = "none";
-    emitter.emit(EVENT_TYPES.MODAL_IS_CLOSED)
+    modal.classList.add("hidden");
+    document.body.classList.remove("noscroll");
+    emitter.emit(EVENT_TYPES.MODAL_IS_CLOSED);
   });
 
   openButton.addEventListener("click", () => {
@@ -22,15 +24,18 @@ function initModal(emitter) {
     emitter.emit(EVENT_TYPES.CLOSE_MODAL);
   });
 
-  window.addEventListener("click", event => {
+  const handleOutsideClick = event => {
     if (event.target === modal) {
       emitter.emit(EVENT_TYPES.CLOSE_MODAL);
     }
-  });
+  };
 
-  window.addEventListener('keydown', event => {
-    if (event.key === 'Escape') emitter.emit(EVENT_TYPES.CLOSE_MODAL)
-  })
+  window.addEventListener("click", handleOutsideClick);
+  window.addEventListener("touchend", handleOutsideClick);
+
+  window.addEventListener("keydown", event => {
+    if (event.key === "Escape") emitter.emit(EVENT_TYPES.CLOSE_MODAL);
+  });
 }
 
 export default initModal;

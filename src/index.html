@@ -33,21 +33,20 @@
     <div class="main__content">
       <div class="main__top-content">
         <h1 class="title">Create account</h1>
-        <form class="main__form form">
+        <form id="create-account-form" class="main__form form">
           <div class="form__field field">
-            <input name="name" class="field__input" placeholder=" " id="name" type="text" required>
+            <input name="name" class="field__input" placeholder=" " id="name" type="text">
             <label for="name" class="field__label">Full Name</label>
           </div>
 
           <div class="form__field field">
-            <input name="email" class="field__input" placeholder=" " id="email" type="email" required inputmode="email">
+            <input name="email" class="field__input" placeholder=" " id="email" type="email" inputmode="email">
             <label for="email" class="field__label">Email</label>
             <div class="field__error-message">Error</div>
           </div>
 
           <div class="form__field field">
-            <input name="phone" class="field__input" placeholder=" " id="phone" required type="tel" inputmode="tel"
-              pattern="+7 [0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <input name="phone" class="field__input" placeholder=" " id="phone" type="tel" inputmode="tel">
             <label for="phone" class="field__label">Phone</label>
           </div>
 
@@ -68,7 +67,7 @@
               </div>
             </label>
             <label class="form__radio radio">
-              <input class="radio__input" type="radio" name="company-size" disabled>
+              <input class="radio__input" type="radio" name="company-size">
               <div class="radio__box">
                 <img class="radio__image" src="./images/gum-trio.svg">
                 <span class="radio__label">50+</span>
@@ -77,7 +76,7 @@
           </div>
 
           <div class="form__field field">
-            <textarea name="questions" class="field__input" placeholder=" " id="questions" required></textarea>
+            <textarea name="questions" class="field__input" placeholder=" " id="questions"></textarea>
             <label for="queetions" class="field__label">Questions</label>
           </div>
 
@@ -95,26 +94,25 @@
     <div class="modal__content">
       <button id="close-modal-button" class="modal__close-button close-button"></button>
       <h3 class="title">Feedback form</h3>
-      <form class="modal__form form">
+      <form id="feedback-form" class="modal__form form">
         <div class="form__field field">
-          <input name="name" class="field__input" placeholder=" " id="name" type="text" required>
+          <input name="name" class="field__input" placeholder=" " id="name" type="text">
           <label for="name" class="field__label">Full Name</label>
         </div>
 
         <div class="form__field field">
-          <input name="email" class="field__input" placeholder=" " id="email" type="email" required inputmode="email">
+          <input name="email" class="field__input" placeholder=" " id="email" type="email" inputmode="email">
           <label for="email" class="field__label">Email</label>
           <div class="field__error-message">Error</div>
         </div>
 
         <div class="form__field field">
-          <input name="phone" class="field__input" placeholder=" " id="phone" required type="tel" inputmode="tel"
-            pattern="+7 [0-9]{3}-[0-9]{3}-[0-9]{4}">
+          <input name="phone" class="field__input" placeholder=" " id="phone" type="tel" inputmode="tel">
           <label for="phone" class="field__label">Phone</label>
         </div>
 
         <div class="form__field field">
-          <textarea name="questions" class="field__input" placeholder=" " id="questions" required></textarea>
+          <textarea name="questions" class="field__input" placeholder=" " id="questions"></textarea>
           <label for="queetions" class="field__label">Questions</label>
         </div>
 

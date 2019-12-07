@@ -12,8 +12,8 @@
 @import "./blocks/button.css";
 @import "./blocks/radio.css";
 @import "./blocks/field.css";
+@import "./blocks/close-button.css";
 
-@import "./blocks/logo.css";
 @import "./blocks/text.css";
 @import "./blocks/title.css";
 
@@ -21,3 +21,4 @@
 @import "./blocks/form.css";
 
 @import './page.css';
+@import './helpers.css';

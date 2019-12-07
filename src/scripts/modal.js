@@ -4,7 +4,7 @@ function initModal() {
   const closeButton = document.getElementById("close-modal-button");
 
   openButton.addEventListener("click", () => {
-    modal.style.display = "block";
+    modal.style.display = "flex";
   });
 
   closeButton.addEventListener("click", () => {

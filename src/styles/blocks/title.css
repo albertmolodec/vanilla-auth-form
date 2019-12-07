@@ -14,3 +14,8 @@ h2.title {
     line-height: var(--size-lineheight-text-600);
   }
 }
+
+h3.title {
+  font-size: var(--size-font-text-550);
+  line-height: var(--size-lineheight-text-500);
+}

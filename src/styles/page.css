@@ -15,6 +15,7 @@
 
 .main,
 .contact {
+  height: 100%;
   min-height: 100vh;
   display: flex;
 }
@@ -71,6 +72,11 @@
 
 .contact__logo-link {
   margin-bottom: 168px;
+}
+
+.contact__logo {
+  width: 150px;
+  height: 28px;
 }
 
 .contact__button {

@@ -22,7 +22,7 @@
     background-color: var(--color-white);
     padding: 40px 40px 70px 40px;
 
-    animation-name: animateTop;
+    animation-name: animate;
     animation-duration: 0.2s;
   }
 
@@ -39,7 +39,7 @@
   }
 }
 
-@keyframes animateTop {
+@keyframes animate {
   from {
     opacity: 0;
   }

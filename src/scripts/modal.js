@@ -27,6 +27,10 @@ function initModal(emitter) {
       emitter.emit(EVENT_TYPES.CLOSE_MODAL);
     }
   });
+
+  window.addEventListener('keydown', event => {
+    if (event.key === 'Escape') emitter.emit(EVENT_TYPES.CLOSE_MODAL)
+  })
 }
 
 export default initModal;

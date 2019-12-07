@@ -90,6 +90,10 @@
   width: 100%;
 }
 
+.main__footer {
+  margin-top: 49px;
+}
+
 .main__form {
   width: 100%;
   max-width: 371px;

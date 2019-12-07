@@ -5,10 +5,11 @@
 
   &__image {
     height: 37px;
+    opacity: 0.7;
   }
 
   &__label {
-    color: var(--color-grey-700);
+    color: var(--color-grey-300);
     font-size: var(--size-font-text-400);
     line-height: var(--size-lineheight-text-400);
     margin-top: 11px;
@@ -16,6 +17,7 @@
 
   &__box {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: center;
 
@@ -30,45 +32,34 @@
     }
   }
 
-  &__input:checked + &__box {
+  &__input:checked ,
+
+  &__input:checked ~ &__box {
     box-shadow: 0 0 0 0px var(--color-grey-100), 0 0 0 1px var(--color-grey-700);
+
+    & .radio__label {
+      color: var(--color-grey-700);
+    }
+
+    & .radio__image {
+      opacity: 1;
+    }
   }
 
-  &__input:focus + &__box,
-  &__input:hover:not([disabled]) + &__box {
+  &__input:focus ~ &__box,
+  &__input:hover:not([disabled]) ~ &__box {
     box-shadow: 0 0 0 0px var(--color-grey-100), 0 0 0 1px var(--color-blue-900);
+
+    & .radio__label {
+      color: var(--color-grey-500);
+    }
+
+    & .radio__image {
+      opacity: 1;
+    }
   }
 
-
-  &__input:disabled + &__box {
+  &__input:disabled ~ &__box {
     opacity: 0.2;
   }
-}
-
-.check__box {
-  position: absolute;
-  margin-left: -1.2em;
-  width: 1em;
-  height: 1em;
-  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff.svg?1550563355034);
-}
-
-.check__input:checked + .check__box {
-  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon.svg?1550563355439);
-}
-
-.check__input:focus + .check__box {
-  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff-focused.svg?1550563355021);
-}
-
-.check__input:checked:focus + .check__box {
-  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon-focused.svg?1550563355063);
-}
-
-.check__input:disabled + .check__box {
-  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Foff-disabled.svg?1550563354916);
-}
-
-.check__input:checked:disabled + .check__box {
-  background-image: url(https://cdn.glitch.com/d6162378-5823-4160-a555-3d9789bd2b92%2Fon-disabled.svg?1550563354883);
 }

@@ -2,12 +2,12 @@
 <html class="page" lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png" />
-  <link rel="stylesheet" href="./styles/styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png">
+  <link rel="stylesheet" href="./styles/styles.css">
   <title>Registration form</title>
 </head>
 
@@ -15,7 +15,7 @@
   <aside class="contact">
     <div class="contact__content">
       <a class="contact__logo-link" href="#">
-        <img class="contact__logo" src="./images/chewing-gum-logo.svg" alt="Chewing Gum logo" />
+        <img class="contact__logo" src="./images/chewing-gum-logo.svg" alt="Chewing Gum logo">
       </a>
       <h2 class="title">Contact us</h2>
       <p class="text center">
@@ -34,34 +34,53 @@
       <div class="main__top-content">
         <h1 class="title">Create account</h1>
         <form class="main__form form">
-          <input type="text">
-          <input type="text">
-          <input type="text">
-          <div class="form__radio-block">
-            <label class="radio">
-                <input class="radio__input" type="radio" name="company-size" >
-                <div class="radio__box">
-                  <img class="radio__image" src="./images/gum.svg">
-                  <span class="radio__label">1-15</span>
-                </div>
-              </label>
-              <label class="radio">
-                <input class="radio__input" type="radio" name="company-size" >
-                <div class="radio__box">
-                  <img class="radio__image" src="./images/gum-pair.svg">
-                  <span class="radio__label">5-50</span>
-                </div>
-              </label>
-              <label class="radio">
-                <input class="radio__input" type="radio" name="company-size" disabled >
-                <div class="radio__box">
-                  <img class="radio__image" src="./images/gum-trio.svg">
-                  <span class="radio__label">50+</span>
-                </div>
-              </label>
+          <div class="form__field field">
+            <input name="name" class="field__input" placeholder=" " id="name" type="text" required autofocus>
+            <label for="name" class="field__label">Full Name</label>
           </div>
-          <textarea name="" id="" cols="30" rows="10"></textarea>
-          <button type="submit" class="button">Submit</button>
+
+          <div class="form__field field">
+            <input name="email" class="field__input" placeholder=" " id="email" type="email" required inputmode="email">
+            <label for="email" class="field__label">Email</label>
+            <div class="field__error-message">Error</div>
+          </div>
+
+          <div class="form__field field">
+            <input name="phone" class="field__input" placeholder=" " id="phone" required type="tel" inputmode="tel"pattern="+7 [0-9]{3}-[0-9]{3}-[0-9]{4}">
+            <label for="phone" class="field__label">Phone</label>
+          </div>
+
+          <div class="form__radio-header">Company size</div>
+          <div class="form__radio-block">
+            <label class="form__radio radio">
+              <input class="radio__input" type="radio" name="company-size">
+              <div class="radio__box">
+                <img class="radio__image" src="./images/gum.svg">
+                <span class="radio__label">1-15</span>
+              </div>
+            </label>
+            <label class="form__radio radio">
+              <input class="radio__input" type="radio" name="company-size">
+              <div class="radio__box">
+                <img class="radio__image" src="./images/gum-pair.svg">
+                <span class="radio__label">5-50</span>
+              </div>
+            </label>
+            <label class="form__radio radio">
+              <input class="radio__input" type="radio" name="company-size" disabled>
+              <div class="radio__box">
+                <img class="radio__image" src="./images/gum-trio.svg">
+                <span class="radio__label">50+</span>
+              </div>
+            </label>
+          </div>
+
+          <div class="form__field field">
+            <textarea name="questions" class="field__input" placeholder=" " id="questions" required></textarea>
+            <label for="queetions" class="field__label">Questions</label>
+          </div>
+
+          <button type="submit" class="form__submit-button button">Submit</button>
         </form>
       </div>
       <footer>

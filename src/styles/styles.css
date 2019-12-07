@@ -9,12 +9,15 @@
 @import "./variables/spacers.css";
 @import "./variables/typography.css";
 
-@import "./blocks/logo.css";
-@import "./blocks/modal.css";
 @import "./blocks/button.css";
 @import "./blocks/radio.css";
+@import "./blocks/field.css";
+
+@import "./blocks/logo.css";
 @import "./blocks/text.css";
 @import "./blocks/title.css";
+
+@import "./blocks/modal.css";
 @import "./blocks/form.css";
 
 @import './page.css';

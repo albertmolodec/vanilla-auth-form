@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="format-detection" content="telephone=no">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
-  <link rel="stylesheet" href="/styles/styles.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon.png" />
+  <link rel="stylesheet" href="./styles/styles.css" />
   <title>Registration form</title>
 </head>
 
@@ -15,7 +15,7 @@
   <aside class="contact">
     <div class="contact__content">
       <a class="contact__logo-link" href="#">
-        <img class="contact__logo" src="/images/chewing-gum-logo.svg" alt="Chewing Gum logo" />
+        <img class="contact__logo" src="./images/chewing-gum-logo.svg" alt="Chewing Gum logo" />
       </a>
       <h2 class="title">Contact us</h2>
       <p class="text center">
@@ -33,19 +33,32 @@
     <div class="main__content">
       <div class="main__top-content">
         <h1 class="title">Create account</h1>
-        <form action="javascript:void(0);">
+        <form class="main__form form">
           <input type="text">
           <input type="text">
           <input type="text">
-          <div>
-            <input type="radio" id="contactChoice1" name="contact" value="email" checked>
-            <label for="contactChoice1">Email</label>
-
-            <input type="radio" id="contactChoice2" name="contact" value="phone">
-            <label for="contactChoice2">Phone</label>
-
-            <input type="radio" id="contactChoice3" name="contact" value="mail">
-            <label for="contactChoice3">Mail</label>
+          <div class="form__radio-block">
+            <label class="radio">
+                <input class="radio__input" type="radio" name="company-size" >
+                <div class="radio__box">
+                  <img class="radio__image" src="./images/gum.svg">
+                  <span class="radio__label">1-15</span>
+                </div>
+              </label>
+              <label class="radio">
+                <input class="radio__input" type="radio" name="company-size" >
+                <div class="radio__box">
+                  <img class="radio__image" src="./images/gum-pair.svg">
+                  <span class="radio__label">5-50</span>
+                </div>
+              </label>
+              <label class="radio">
+                <input class="radio__input" type="radio" name="company-size" disabled >
+                <div class="radio__box">
+                  <img class="radio__image" src="./images/gum-trio.svg">
+                  <span class="radio__label">50+</span>
+                </div>
+              </label>
           </div>
           <textarea name="" id="" cols="30" rows="10"></textarea>
           <button type="submit" class="button">Submit</button>
@@ -73,6 +86,6 @@
       </div>
     </div>
   </div>
-  <script defer src="/scripts/index.js"></script>
+  <script defer src="./scripts/index.js"></script>
 </body>
 </html>

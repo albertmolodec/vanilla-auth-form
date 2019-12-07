@@ -14,6 +14,10 @@
   }
 }
 
+textarea.field__input {
+  min-height: 100px;
+}
+
 .field__input {
   padding: 14px 19px;
   width: 100%;

@@ -1,10 +1,6 @@
 import { setButtonAvailability } from "./helpers";
 import { VALIDATION_RULES } from "./constants";
 
-// function validateFunctions = {
-//   required
-// }
-
 function initValidation(formElement) {
 
     console.log(formElement.elements);

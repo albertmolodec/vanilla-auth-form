@@ -8,10 +8,6 @@ button.button {
   padding: 0px 47px;
   border-radius: var(--size-border-radius-button);
 
-  @mixin mobile {
-    /* background-color: black; */
-  }
-
   background-color: var(--color-blue-300);
   color: var(--color-white);
   border-color: transparent;

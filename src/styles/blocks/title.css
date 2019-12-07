@@ -1,0 +1,16 @@
+.title {
+  margin-bottom: var(--size-spacers-spacer-500);
+}
+
+h1.title,
+h2.title {
+  @mixin no-mobile {
+    font-size: var(--size-font-text-700);
+    line-height: var(--size-lineheight-text-700);
+  }
+
+  @mixin mobile {
+    font-size: var(--size-font-text-600);
+    line-height: var(--size-lineheight-text-600);
+  }
+}

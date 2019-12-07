@@ -1,51 +1,89 @@
 .page,
 .page__body {
-    height: 100%;
+  height: 100%;
 }
 
-body {
+.page {
   font-family: var(--font-family-text);
   background-color: var(--color-white);
+  color: var(--color-black);
 }
 
-.layout {
+.page__body {
   display: grid;
   grid-template-columns: 41fr 59fr;
 
-  @media screen and (max-width: 1024px) {
+  @mixin mobile {
     grid-template-columns: 1fr;
   }
 }
 
-.layout-container {
+.main,
+.contact {
   height: 100vh;
+  display: flex;
 }
 
 .contact {
   background: var(--color-blue-pink-gradient);
-  display: flex;
+  color: var(--color-white);
   justify-content: flex-end;
 
-  &__container {
-    max-width: 420px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  @mixin mobile {
     justify-content: center;
-    align-items: center;
   }
 }
 
-.creation {
-  background: var(--color-white);
-
-  &__container {
-    max-width: 604px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+.main {
+  @mixin mobile {
     justify-content: center;
   }
+}
+
+.main__content {
+  max-width: 604px;
+  justify-content: space-between;
+
+  @mixin mobile {
+    padding: 60px 24px 18px 24px;
+  }
+
+  @mixin no-mobile {
+    padding: 89px 129px 20px 104px;
+  }
+}
+
+.contact__content {
+  max-width: 420px;
+
+  @mixin mobile {
+    padding: 45px 24px 18px 24px;
+  }
+
+  @mixin no-mobile {
+    padding: 45px 64px;
+  }
+}
+
+.main__content,
+.contact__content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__logo-link {
+  margin-bottom: 168px;
+}
+
+.contact__button {
+  margin-top: 40px;
+}
+
+.main__top-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

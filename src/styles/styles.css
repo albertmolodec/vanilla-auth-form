@@ -1,12 +1,6 @@
-/* Reset */
-
 @import "./reset.css";
 
-/* Fonts */
-
 @import "./fonts.css";
-
-/* Variables */
 
 @import "./variables/border-radius.css";
 @import "./variables/colors.css";
@@ -15,12 +9,13 @@
 @import "./variables/spacers.css";
 @import "./variables/typography.css";
 
-/* Blocks */
 @import "./blocks/logo.css";
 @import "./blocks/modal.css";
 @import "./blocks/button.css";
+@import "./blocks/input.css";
+@import "./blocks/text.css";
+@import "./blocks/title.css";
 
-/* Misc */
 
 @import './page.css';
 @import './helpers.css';

@@ -1,78 +1,77 @@
 <!DOCTYPE html>
 <html class="page" lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/images/favicon.png"
-    />
-    <link rel="stylesheet" href="/styles/styles.css" />
-    <title>Registration form</title>
-  </head>
-  <body class="page__body">
-    <div class="layout">
-      <div class="layout-container contact">
-        <div class="contact__container">
-          <img
-            class="logo"
-            src="/images/chewing-gum-logo.svg"
-            alt="Chewing Gum logo"
-          />
-          <h2 class="title">Contact us</h2>
-          <p class="text-block">
-            contacts@chewinggum.com 37 Greenpoint Avenue Ste. 219 +1 999 99 99 9
-          </p>
-          <button id="myBtn" class="button inverted" disabled>Send feedback</button>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png" />
+  <link rel="stylesheet" href="/styles/styles.css" />
+  <title>Registration form</title>
+</head>
+
+<body class="page__body">
+  <aside class="contact">
+    <div class="contact__content">
+      <a class="contact__logo-link" href="#">
+        <img class="contact__logo" src="/images/chewing-gum-logo.svg" alt="Chewing Gum logo" />
+      </a>
+      <h2 class="title">Contact us</h2>
+      <p class="text center">
+        contacts@chewinggum.com
+        <br>
+        37 Greenpoint Avenue Ste. 219
+        <br>
+        +1 999 99 99 9
+      </p>
+      <button id="send-feedback-button" class="contact__button button inverted">Send feedback</button>
+    </div>
+  </aside>
+  </main>
+  <main class="main">
+    <div class="main__content">
+      <div class="main__top-content">
+        <h1 class="title">Create account</h1>
+        <form action="javascript:void(0);">
+          <input type="text">
+          <input type="text">
+          <input type="text">
+          <div>
+            <input type="radio" id="contactChoice1" name="contact" value="email" checked>
+            <label for="contactChoice1">Email</label>
+
+            <input type="radio" id="contactChoice2" name="contact" value="phone">
+            <label for="contactChoice2">Phone</label>
+
+            <input type="radio" id="contactChoice3" name="contact" value="mail">
+            <label for="contactChoice3">Mail</label>
+          </div>
+          <textarea name="" id="" cols="30" rows="10"></textarea>
+          <button type="submit" class="button">Submit</button>
+        </form>
       </div>
-      <div class="layout-container creation">
-        <div class="creation__container">
-          <h1 class="title">Create account</h1>
-          <form action="javascript:void(0);">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <div>
-                <input type="radio" id="contactChoice1"
-                 name="contact" value="email" checked>
-                <label for="contactChoice1">Email</label>
-
-                <input type="radio" id="contactChoice2"
-                 name="contact" value="phone">
-                <label for="contactChoice2">Phone</label>
-
-                <input type="radio" id="contactChoice3"
-                 name="contact" value="mail">
-                <label for="contactChoice3">Mail</label>
-              </div>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-              <button type="submit" class="button">Submit</button>
-          </form>
-          <footer>© 2019 All rights reserved. Privacy Policy. Terms of Service.</footer>
-        </div>
+      <footer>
+        <small class="text">
+          © 2019 All rights reserved. Privacy Policy. Terms of Service.
+        </small>
+      </footer>
+    </div>
+  </main>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button id="close-modal-button" class="button">x</button>
+        <h2 class="title">Feedback form</h2>
+        <form action="javascript:void(0);">
+          <input type="text">
+          <input type="text">
+          <input type="text">
+          <textarea type="text">
+          <button type="submit" class="button">Submit</button>
+        </form>
       </div>
     </div>
-
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <div class="modal-body">
-          <button id="closeBtn" class="button">x</button>
-          <h2 class="title">Feedback form</h2>
-          <form action="javascript:void(0);">
-            <input type="text">
-            <input type="text">
-            <input type="text">
-            <textarea type="text">
-            <button type="submit" class="button">Submit</button>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <script src="/scripts/index.js"></script>
-  </body>
+  </div>
+  <script defer src="/scripts/index.js"></script>
+</body>
 </html>

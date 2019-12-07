@@ -2,18 +2,20 @@
   --size-font-text-700: 32px;
   --size-font-text-600: 26px;
   --size-font-text-500: 18px;
-  --size-font-text-300: 15px;
-  --size-font-text-200: 13px;
-  --size-font-text-100: 12px;
-  --size-font-text-50: 8px;
+  --size-font-text-400: 15px;
+  --size-font-text-300: 13px;
+  --size-font-text-200: 12px;
+  --size-font-text-100: 8px;
+  --size-font-text-50: 9px;
 
   --size-lineheight-text-700: 40px;
   --size-lineheight-text-600: 33px;
   --size-lineheight-text-500: 30px;
-  --size-lineheight-text-300: 20px;
-  --size-lineheight-text-200: 19px;
-  --size-lineheight-text-100: 15px;
-  --size-lineheight-text-50: 10px;
+  --size-lineheight-text-400: 20px;
+  --size-lineheight-text-300: 19px;
+  --size-lineheight-text-200: 15px;
+  --size-lineheight-text-100: 10px;
+  --size-lineheight-text-50: 20px;
 
   --size-button-button: 18px;
   --size-line-height-button: 23px;

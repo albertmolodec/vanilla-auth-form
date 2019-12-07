@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="page" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,22 +13,20 @@
     <link rel="stylesheet" href="/styles/styles.css" />
     <title>Registration form</title>
   </head>
-  <body>
+  <body class="page__body">
     <div class="layout">
       <div class="layout-container contact">
         <div class="contact__container">
           <img
             class="logo"
             src="/images/chewing-gum-logo.svg"
-            width="150"
-            height="28"
             alt="Chewing Gum logo"
           />
           <h2 class="title">Contact us</h2>
           <p class="text-block">
             contacts@chewinggum.com 37 Greenpoint Avenue Ste. 219 +1 999 99 99 9
           </p>
-          <button id="myBtn" class="button" width="200" height="40">Send feedback</button>
+          <button id="myBtn" class="button inverted" disabled>Send feedback</button>
         </div>
       </div>
       <div class="layout-container creation">
@@ -52,8 +50,9 @@
                 <label for="contactChoice3">Mail</label>
               </div>
               <textarea name="" id="" cols="30" rows="10"></textarea>
-              <button type="submit">Submit</button>
+              <button type="submit" class="button">Submit</button>
           </form>
+          <footer>© 2019 All rights reserved. Privacy Policy. Terms of Service.</footer>
         </div>
       </div>
     </div>
@@ -61,14 +60,14 @@
     <div id="myModal" class="modal">
       <div class="modal-content">
         <div class="modal-body">
-          <button id="closeBtn">x</button>
+          <button id="closeBtn" class="button">x</button>
           <h2 class="title">Feedback form</h2>
           <form action="javascript:void(0);">
             <input type="text">
             <input type="text">
             <input type="text">
             <textarea type="text">
-            <button type="submit">Submit</button>
+            <button type="submit" class="button">Submit</button>
           </form>
         </div>
       </div>

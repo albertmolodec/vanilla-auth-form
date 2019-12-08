@@ -1,47 +1,68 @@
-import {
-  setButtonAvailability,
-  getPlainName,
-  getRequiredFields
-} from "./helpers";
+import { getPlainName, getRequiredFields } from "./helpers";
 import { validate } from "./validate";
 import { EVENT_TYPE } from "./constants";
 
 const initForm = ({ formName, emitter }) => {
-  emitter.on(
-    EVENT_TYPE.FORM.CHANGED,
-    ({ inputElement, isValid, errorMessage }) => {
-      if (isValid) {
-        emitter.emit(EVENT_TYPE.FORM.HIDE, { inputElement });
-        emitter.emit(EVENT_TYPE.FORM.CONFIRM, { inputElement });
-      } else {
-        emitter.emit(EVENT_TYPE.FORM.HIDE, { inputElement });
-        emitter.emit(EVENT_TYPE.FORM.WARN, { inputElement, errorMessage });
-      }
-    }
-  );
+  const formElement = document.getElementById(`${formName}-form`);
+  const submitElement = formElement.querySelector('button[type="submit"]');
+  const elements = Array.from(formElement.elements);
+  const requiredFields = getRequiredFields(elements);
 
-  emitter.on(EVENT_TYPE.FORM.WARN, ({ inputElement, errorMessage }) => {
+  const EVENT_CHANGED = `${EVENT_TYPE.FORM.CHANGED}_${formName.toUpperCase()}`
+  const EVENT_WARN = `${EVENT_TYPE.FORM.WARN}_${formName.toUpperCase()}`
+  const EVENT_CONFIRM = `${EVENT_TYPE.FORM.CONFIRM}_${formName.toUpperCase()}`
+  const EVENT_HIDE = `${EVENT_TYPE.FORM.HIDE}`
+  const EVENT_CHECK_BUTTON = `${EVENT_TYPE.FORM.CHECK_BUTTON}_${formName.toUpperCase()}`
+
+  const handleInputChanged = ({ inputElement, isValid, errorMessage }) => {
+    if (isValid) {
+      emitter.emit(EVENT_HIDE, { inputElement });
+      emitter.emit(EVENT_CONFIRM, { inputElement });
+    } else {
+      emitter.emit(EVENT_HIDE, { inputElement });
+      emitter.emit(EVENT_WARN, { inputElement, errorMessage });
+    }
+
+    emitter.emit(EVENT_CHECK_BUTTON);
+  };
+
+  const handleInputWarn = ({ inputElement, errorMessage }) => {
     const fieldElement = inputElement.parentElement;
     fieldElement.classList.add("field--invalid");
     fieldElement.querySelector(".field__message").textContent = errorMessage;
-  });
+  };
 
-  emitter.on(EVENT_TYPE.FORM.CONFIRM, ({ inputElement }) => {
+  const handleInputConfirm = ({ inputElement }) => {
     const fieldElement = inputElement.parentElement;
     fieldElement.classList.add("field--valid");
-  });
+  };
 
-  emitter.on(EVENT_TYPE.FORM.HIDE, ({ inputElement }) => {
+  const handleInputHide = ({ inputElement }) => {
     const fieldElement = inputElement.parentElement;
     fieldElement.classList.remove("field--valid");
     fieldElement.classList.remove("field--invalid");
     fieldElement.querySelector(".field__message").textContent = "";
-  });
+  };
 
-  const formElement = document.getElementById(`${formName}-form`);
-  const elements = Array.from(formElement.elements);
+  const handleCheckButton = () => {
+    let isAllValid = true;
+    requiredFields.forEach(inputElement => {
+      const name = getPlainName({ fullName: inputElement.name, formName });
+      const isValid = validate({ inputElement, name })
+        .isValid;
+      if (!isValid) {
+        isAllValid = false;
+      }
+      debugger
+    });
+    submitElement.disabled = !isAllValid;
+  };
 
-  const requiredFields = getRequiredFields(elements);
+  emitter.on(EVENT_CHANGED, handleInputChanged);
+  emitter.on(EVENT_WARN, handleInputWarn);
+  emitter.on(EVENT_CONFIRM, handleInputConfirm);
+  emitter.on(EVENT_HIDE, handleInputHide);
+  emitter.on(EVENT_CHECK_BUTTON, handleCheckButton);
 
   const handleBlur = event => {
     const name = getPlainName({ fullName: event.target.name, formName });
@@ -52,7 +73,7 @@ const initForm = ({ formName, emitter }) => {
       name
     });
 
-    emitter.emit(EVENT_TYPE.FORM.CHANGED, {
+    emitter.emit(EVENT_CHANGED, {
       inputElement,
       isValid,
       errorMessage

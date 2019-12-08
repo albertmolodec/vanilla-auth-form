@@ -1,7 +1,3 @@
-export const setButtonAvailability = ({ validate, submitElement }) => {
-  submitElement.disabled = !validate();
-};
-
 export const restoreFormValues = formElement => {
   formElement.reset();
 };

@@ -27,7 +27,6 @@
     "serve": "^11.2.0"
   },
   "dependencies": {
-    "mitt": "^1.2.0",
     "postcss-mixins": "^6.2.3",
     "postcss-nested": "^4.2.1",
     "postcss-preset-env": "^6.7.0"

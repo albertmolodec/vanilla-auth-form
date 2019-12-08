@@ -14,7 +14,7 @@ export const validate = ({ inputElement, name }) => {
     }
   }
 
-  if (value === "") {
+  if (value.trim() === "") {
     result = {
       isValid: false,
       errorMessage: "Please fill the field"

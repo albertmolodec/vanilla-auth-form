@@ -8,22 +8,16 @@ const initForm = ({ formName, emitter }) => {
   const elements = Array.from(formElement.elements);
   const requiredFields = getRequiredFields(elements);
 
-  const EVENT_CHANGED = `${EVENT_TYPE.FORM.CHANGED}_${formName.toUpperCase()}`
-  const EVENT_WARN = `${EVENT_TYPE.FORM.WARN}_${formName.toUpperCase()}`
-  const EVENT_CONFIRM = `${EVENT_TYPE.FORM.CONFIRM}_${formName.toUpperCase()}`
-  const EVENT_HIDE = `${EVENT_TYPE.FORM.HIDE}`
-  const EVENT_CHECK_BUTTON = `${EVENT_TYPE.FORM.CHECK_BUTTON}_${formName.toUpperCase()}`
-
   const handleInputChanged = ({ inputElement, isValid, errorMessage }) => {
     if (isValid) {
-      emitter.emit(EVENT_HIDE, { inputElement });
-      emitter.emit(EVENT_CONFIRM, { inputElement });
+      emitter.emit(EVENT_TYPE.FORM.HIDE, { inputElement });
+      emitter.emit(EVENT_TYPE.FORM.CONFIRM, { inputElement });
     } else {
-      emitter.emit(EVENT_HIDE, { inputElement });
-      emitter.emit(EVENT_WARN, { inputElement, errorMessage });
+      emitter.emit(EVENT_TYPE.FORM.HIDE, { inputElement });
+      emitter.emit(EVENT_TYPE.FORM.WARN, { inputElement, errorMessage });
     }
 
-    emitter.emit(EVENT_CHECK_BUTTON);
+    emitter.emit(EVENT_TYPE.FORM.CHECK_BUTTON);
   };
 
   const handleInputWarn = ({ inputElement, errorMessage }) => {
@@ -48,21 +42,19 @@ const initForm = ({ formName, emitter }) => {
     let isAllValid = true;
     requiredFields.forEach(inputElement => {
       const name = getPlainName({ fullName: inputElement.name, formName });
-      const isValid = validate({ inputElement, name })
-        .isValid;
+      const isValid = validate({ inputElement, name }).isValid;
       if (!isValid) {
         isAllValid = false;
       }
-      debugger
     });
     submitElement.disabled = !isAllValid;
   };
 
-  emitter.on(EVENT_CHANGED, handleInputChanged);
-  emitter.on(EVENT_WARN, handleInputWarn);
-  emitter.on(EVENT_CONFIRM, handleInputConfirm);
-  emitter.on(EVENT_HIDE, handleInputHide);
-  emitter.on(EVENT_CHECK_BUTTON, handleCheckButton);
+  emitter.on(EVENT_TYPE.FORM.CHANGED, handleInputChanged);
+  emitter.on(EVENT_TYPE.FORM.WARN, handleInputWarn);
+  emitter.on(EVENT_TYPE.FORM.CONFIRM, handleInputConfirm);
+  emitter.on(EVENT_TYPE.FORM.HIDE, handleInputHide);
+  emitter.on(EVENT_TYPE.FORM.CHECK_BUTTON, handleCheckButton);
 
   const handleBlur = event => {
     const name = getPlainName({ fullName: event.target.name, formName });
@@ -73,7 +65,7 @@ const initForm = ({ formName, emitter }) => {
       name
     });
 
-    emitter.emit(EVENT_CHANGED, {
+    emitter.emit(EVENT_TYPE.FORM.CHANGED, {
       inputElement,
       isValid,
       errorMessage

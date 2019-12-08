@@ -11,6 +11,11 @@
     .field__input {
       border: 1px solid var(--color-red-500);
     }
+
+    .field__message {
+      visibility: visible;
+      color: var(--color-red-400);
+    }
   }
 }
 
@@ -72,10 +77,11 @@ textarea.field__input {
   }
 }
 
-.field__error-message {
+.field__message {
+  visibility: hidden;
   margin-top: 4px;
 
-  color: var(--color-red-400);
   font-size: var(--size-font-text-100);
-  line-height: var(--size-line-height-text-100);
+  line-height: var(--size-lineheight-text-100);
+  height: var(--size-lineheight-text-100);
 }

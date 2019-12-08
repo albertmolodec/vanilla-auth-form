@@ -35,22 +35,21 @@
         <h1 class="title">Create account</h1>
         <form id="create-account-form" class="main__form form">
           <div class="form__field field">
-            <!-- // NOTE -->
             <input name="create-account-name" class="field__input" placeholder="Full Name" id="create-account-name" type="text" required>
             <label for="create-account-name" class="field__label">Full Name</label>
+            <div class="field__message"></div>
           </div>
 
           <div class="form__field field">
-            <!-- // NOTE -->
             <input name="create-account-email" class="field__input" placeholder="Email" id="create-account-email" type="text" inputmode="email" required>
             <label for="create-account-email" class="field__label">Email</label>
-            <div class="field__error-message">Error</div>
+            <div class="field__message"></div>
           </div>
 
           <div class="form__field field">
-            <!-- // NOTE -->
             <input name="create-account-phone" class="field__input" placeholder="Phone" id="create-account-phone" type="text" inputmode="tel" required>
             <label for="create-account-phone" class="field__label">Phone</label>
+            <div class="field__message"></div>
           </div>
 
           <fieldset class="form__radio-box" id="create-account-company-size">
@@ -58,7 +57,6 @@
             <ul class="form__radio-list">
               <li>
                 <label class="form__radio radio">
-                  <!-- // NOTE -->
                   <input class="radio__input" value="1-15" type="radio" name="create-account-company-size" checked>
                   <div class="radio__box">
                     <img class="radio__image" src="./images/gum.svg">
@@ -68,7 +66,6 @@
               </li>
               <li>
                 <label class="form__radio radio">
-                  <!-- // NOTE -->
                   <input class="radio__input" value="5-50" type="radio" name="create-account-company-size">
                   <div class="radio__box">
                     <img class="radio__image" src="./images/gum-pair.svg">
@@ -78,7 +75,6 @@
               </li>
               <li>
                 <label class="form__radio radio">
-                  <!-- // NOTE -->
                   <input class="radio__input" value="50+" type="radio" name="create-account-company-size">
                   <div class="radio__box">
                     <img class="radio__image" src="./images/gum-trio.svg">
@@ -90,7 +86,6 @@
           </fieldset>
 
           <div class="form__field field">
-            <!-- // NOTE -->
             <textarea name="create-account-questions" class="field__input" placeholder="Questions" id="create-account-questions"></textarea>
             <label for="create-account-questions" class="field__label">Questions</label>
           </div>
@@ -113,17 +108,19 @@
         <div class="form__field field">
           <input name="feedback-name" class="field__input" placeholder="Full Name" id="feedback-name" type="text" required>
           <label for="feedback-name" class="field__label">Full Name</label>
+          <div class="field__message"></div>
         </div>
 
         <div class="form__field field">
           <input name="feedback-email" class="field__input" placeholder="Email" id="feedback-email" type="text" inputmode="email" required>
           <label for="feedback-email" class="field__label">Email</label>
-          <div class="field__error-message">Error</div>
+          <div class="field__message"></div>
         </div>
 
         <div class="form__field field">
           <input name="feedback-phone" class="field__input" placeholder="Phone" id="feedback-phone" type="text" inputmode="tel" required>
           <label for="feedback-phone" class="field__label">Phone</label>
+          <div class="field__message"></div>
         </div>
 
         <div class="form__field field">

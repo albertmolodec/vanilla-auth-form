@@ -1,5 +1,4 @@
-import { FORMS, EVENT_TYPES } from "./constants";
-import { restoreFormValues } from "./helpers";
+import { FORM_NAME } from "./constants";
 
 import initModal from "./modal";
 import initValidation from "./validation";
@@ -7,12 +6,11 @@ import initValidation from "./validation";
 import eventEmitter from "./eventEmitter";
 const emitter = eventEmitter();
 
-initModal(emitter);
+initModal({ emitter });
 
-Object.values(FORMS).forEach(id => {
-  initValidation(document.getElementById(id));
-});
-
-emitter.on(EVENT_TYPES.MODAL_IS_CLOSED, () => {
-  restoreFormValues(document.getElementById(FORMS.FEEDBACK));
+Object.values(FORM_NAME).forEach(formName => {
+  initValidation({
+    formName,
+    emitter
+  });
 });

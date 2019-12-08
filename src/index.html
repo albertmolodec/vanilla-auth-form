@@ -35,19 +35,19 @@
         <h1 class="title">Create account</h1>
         <form id="create-account-form" class="main__form form">
           <div class="form__field field">
-            <input name="name[]" class="field__input" placeholder="Full Name" id="name" type="text" required>
-            <label for="name[]" class="field__label">Full Name</label>
+            <input name="name[]" class="field__input" placeholder="Full Name" id="create-account-name" type="text" required>
+            <label for="create-account-name" class="field__label">Full Name</label>
           </div>
 
           <div class="form__field field">
-            <input name="email[]" class="field__input" placeholder="Email" id="email" type="email" inputmode="email" required>
-            <label for="email[]" class="field__label">Email</label>
+            <input name="email[]" class="field__input" placeholder="Email" id="create-account-email" type="email" inputmode="email" required>
+            <label for="create-account-email" class="field__label">Email</label>
             <div class="field__error-message">Error</div>
           </div>
 
           <div class="form__field field">
-            <input name="phone[]" class="field__input" placeholder="Phone" id="phone" type="tel" inputmode="tel" required>
-            <label for="phone[]" class="field__label">Phone</label>
+            <input name="phone[]" class="field__input" placeholder="Phone" id="create-account-phone" type="tel" inputmode="tel" required>
+            <label for="create-account-phone" class="field__label">Phone</label>
           </div>
 
           <fieldset class="form__radio-box">
@@ -55,7 +55,7 @@
             <ul class="form__radio-list">
               <li>
                 <label class="form__radio radio">
-                  <input class="radio__input" type="radio" name="company-size" required>
+                  <input class="radio__input" id="create-account-company-size-1" type="radio" name="create-account-company-size" required>
                   <div class="radio__box">
                     <img class="radio__image" src="./images/gum.svg">
                     <span class="radio__label">1-15</span>
@@ -64,7 +64,7 @@
               </li>
               <li>
                 <label class="form__radio radio">
-                  <input class="radio__input" type="radio" name="company-size" required>
+                  <input class="radio__input" id="create-account-company-size-2" type="radio" name="company-size" required>
                   <div class="radio__box">
                     <img class="radio__image" src="./images/gum-pair.svg">
                     <span class="radio__label">5-50</span>
@@ -73,7 +73,7 @@
               </li>
               <li>
                 <label class="form__radio radio">
-                  <input class="radio__input" type="radio" name="company-size">
+                  <input class="radio__input" id="create-account-company-size-1" type="radio" name="create-account-company-size">
                   <div class="radio__box">
                     <img class="radio__image" src="./images/gum-trio.svg">
                     <span class="radio__label">50+</span>
@@ -84,8 +84,8 @@
           </fieldset>
 
           <div class="form__field field">
-            <textarea name="questions[]" class="field__input" placeholder="Questions" id="questions"></textarea>
-            <label for="queetions[]" class="field__label">Questions</label>
+            <textarea name="questions" class="field__input" placeholder="Questions" id="create-account-questions"></textarea>
+            <label for="create-account-questions" class="field__label">Questions</label>
           </div>
 
           <button type="submit" class="form__submit-button button" disabled>Submit</button>
@@ -104,24 +104,24 @@
       <h3 class="title">Feedback form</h3>
       <form id="feedback-form" class="modal__form form">
         <div class="form__field field">
-          <input name="name[]" class="field__input" placeholder=" " id="name" type="text" required>
-          <label for="name[]" class="field__label">Full Name</label>
+          <input name="name[]" class="field__input" placeholder="Full Name" id="feedback-name" type="text" required>
+          <label for="feedback-name" class="field__label">Full Name</label>
         </div>
 
         <div class="form__field field">
-          <input name="email[]" class="field__input" placeholder=" " id="email" type="email" inputmode="email" required>
-          <label for="email[]" class="field__label">Email</label>
+          <input name="email[]" class="field__input" placeholder="Email" id="feedback-email" type="email" inputmode="email" required>
+          <label for="feedback-email" class="field__label">Email</label>
           <div class="field__error-message">Error</div>
         </div>
 
         <div class="form__field field">
-          <input name="phone[]" class="field__input" placeholder=" " id="phone" type="tel" inputmode="tel" required>
-          <label for="phone[]" class="field__label">Phone</label>
+          <input name="phone[]" class="field__input" placeholder="Phone" id="feedback-phone" type="tel" inputmode="tel" required>
+          <label for="feedback-phone" class="field__label">Phone</label>
         </div>
 
         <div class="form__field field">
-          <textarea name="questions[]" class="field__input" placeholder=" " id="questions"></textarea>
-          <label for="queetions[]" class="field__label">Questions</label>
+          <textarea name="comments" class="field__input" placeholder="Comments" id="feedback-comments"></textarea>
+          <label for="feedback-comments" class="field__label">Comments</label>
         </div>
 
         <button type="submit" class="form__submit-button button" disabled>Submit</button>

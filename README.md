@@ -7,10 +7,9 @@ This page allows you create an account and send feedback.
 ## Install
 
 ```
-$ git@github.com:albertmolodec/vanilla-auth-form.git
+$ git clone git git@github.com:albertmolodec/vanilla-auth-form.git
 $ cd vanilla-auth-form
 $ yarn
-$ yarn build
 $ yarn start
 ```
 

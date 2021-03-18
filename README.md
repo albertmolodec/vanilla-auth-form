@@ -1,5 +1,9 @@
 # Chewing Gum — Registration Form
 
+:warning: Project is moved to the monorepo for my demo projects: https://github.com/albertmolodec/demos/tree/source/src/vanilla-auth-form.
+
+---
+
 This page allows you create an account and send feedback.
 
 ![Chewing Gum Preview](./src/images/preview.png)
